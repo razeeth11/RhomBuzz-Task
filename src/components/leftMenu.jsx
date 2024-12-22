@@ -12,8 +12,10 @@ import MonitorHeartRoundedIcon from '@mui/icons-material/MonitorHeartRounded';
 import LayersRoundedIcon from '@mui/icons-material/LayersRounded';
 import SettingsInputCompositeRoundedIcon from '@mui/icons-material/SettingsInputCompositeRounded';
 import FormatAlignCenterRoundedIcon from '@mui/icons-material/FormatAlignCenterRounded';
+import { Navigate, useNavigate } from 'react-router';
 
 export const LeftMenuDrawer = () => {
+    const navigate = useNavigate()
 
     const menuHeadTitle = { fontSize: "10px", fontWeight: 600, color: "#c2a7db" }
     const menuItemStyle = { display: "flex", alignItems: "center", gap: "15px", padding: "15px" }
@@ -26,7 +28,7 @@ export const LeftMenuDrawer = () => {
                 <Typography sx={menuHeadTitle}>MENU</Typography>
                 <Box sx={{ mt: 1 }}>
                     {["Dashboard", "Apps", "Layouts"].map((item, index) =>
-                        <MenuItem key={index} sx={menuItemStyle}>
+                        <MenuItem key={index} sx={menuItemStyle} onClick={() => item == "Dashboard" && navigate("/Dashboard")}>
                             {index == 0 ? <DashboardRoundedIcon /> : index == 1 ? <ViewWeekRoundedIcon /> : <VerticalSplitRoundedIcon />}
                             <Typography sx={menuItemText}>{item}</Typography>
                             <KeyboardArrowRightRoundedIcon sx={{ marginLeft: "auto" }} />
@@ -49,9 +51,9 @@ export const LeftMenuDrawer = () => {
             <Grid sx={{ margin: "20px 10px" }}>
                 <Typography sx={menuHeadTitle}>COMPONENTS</Typography>
                 <Box sx={{ mt: 1 }}>
-                    {["Base UI", "Advance UI", "Widgets", "Forms"].map((item, index) =>
-                        <MenuItem key={index} sx={menuItemStyle}>
-                            {index == 0 ? <MonitorHeartRoundedIcon /> : index == 1 ? <LayersRoundedIcon /> : index == 2 ? <SettingsInputCompositeRoundedIcon /> : <FormatAlignCenterRoundedIcon />}
+                    {["Base UI", "Advance UI", "Profile Overview", "Forms"].map((item, index) =>
+                        <MenuItem key={index} sx={menuItemStyle} onClick={() => item == "Profile Overview" && navigate("/Profile-Overview")}>
+                            {index == 0 ? <MonitorHeartRoundedIcon /> : index == 1 ? <LayersRoundedIcon /> : index == 2 ? <PersonSearchRoundedIcon /> : <FormatAlignCenterRoundedIcon />}
                             <Typography sx={menuItemText}>{item}</Typography>
                             <KeyboardArrowRightRoundedIcon sx={{ marginLeft: "auto" }} />
                         </MenuItem>

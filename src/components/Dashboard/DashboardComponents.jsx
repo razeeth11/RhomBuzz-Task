@@ -38,11 +38,11 @@ export const DashboardComponents = () => {
                 }}
             >
                 <Typography sx={{ fontWeight: 600 }}>NFT DASHBOARD</Typography>
-                <Typography sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
                     Dashboards
                     <KeyboardArrowRightRoundedIcon sx={{ color: "#878a99" }} />
                     <Typography sx={{ color: "#878a99" }}>NFT Dashboard</Typography>
-                </Typography>
+                </Box>
             </Grid>
 
             {/* Main Content Section */}
@@ -166,7 +166,7 @@ export const DashboardComponents = () => {
                                 >
                                     ${item.price}
                                 </Typography>
-                                <Typography>
+                                <Box>
                                     <Box
                                         sx={{
                                             display: "flex",
@@ -201,7 +201,7 @@ export const DashboardComponents = () => {
                                     >
                                         vs. previous month
                                     </Typography>
-                                </Typography>
+                                </Box>
                             </Grid>
                         ))}
                     </Grid>

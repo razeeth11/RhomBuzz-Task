@@ -10,4 +10,6 @@ html {
 
 * {
   font-family: "Saira", serif !important;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: none;
 }
