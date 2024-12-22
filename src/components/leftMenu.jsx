@@ -28,7 +28,7 @@ export const LeftMenuDrawer = () => {
                 <Typography sx={menuHeadTitle}>MENU</Typography>
                 <Box sx={{ mt: 1 }}>
                     {["Dashboard", "Apps", "Layouts"].map((item, index) =>
-                        <MenuItem key={index} sx={menuItemStyle} onClick={() => item == "Dashboard" && navigate("/Dashboard")}>
+                        <MenuItem key={index} sx={menuItemStyle} onClick={() => item == "Dashboard" && navigate("/")}>
                             {index == 0 ? <DashboardRoundedIcon /> : index == 1 ? <ViewWeekRoundedIcon /> : <VerticalSplitRoundedIcon />}
                             <Typography sx={menuItemText}>{item}</Typography>
                             <KeyboardArrowRightRoundedIcon sx={{ marginLeft: "auto" }} />

@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/Dashboard" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/Profile-Overview" element={<Widgets />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
@@ -42,7 +42,7 @@ const ErrorPage=()=>{
   const navigate = useNavigate()
   return(
     <Grid sx={{display:"flex",justifyContent:"center",alignItems:"center",margin:"25% 0"}}>
-      <Button sx={{background:"rgb(72, 38, 104)",color:"white",padding:"10px 20px"}} onClick={()=>navigate("/Dashboard")}>Back To Home</Button>
+      <Button sx={{background:"rgb(72, 38, 104)",color:"white",padding:"10px 20px"}} onClick={()=>navigate("/")}>Back To Home</Button>
     </Grid>
   )
 }
