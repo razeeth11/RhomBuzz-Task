@@ -4,7 +4,7 @@ import DiamondRoundedIcon from '@mui/icons-material/DiamondRounded';
 import { useEffect, useState } from "react";
 import { LineChart } from '@mui/x-charts/LineChart';
 
-export const NFTCharts = () => {
+export const NFTCharts = ({marketPlace}) => {
 
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -34,7 +34,6 @@ export const NFTCharts = () => {
         return { days, hours, minutes, seconds };
     }
 
-    const data = [{ value: 83.45, name: "Aetworks" }, { value: 45.67, name: "Auction" }, { value: 4.45, name: "Creators" }]
     const timerStyle = { fontSize: "26px", fontWeight: 600, padding: "10px", width: "40px", textAlign: "center" }
     const timerInnerStyle = { display: "flex", flexDirection: "column", alignItems: "center" }
 
@@ -55,10 +54,10 @@ export const NFTCharts = () => {
                     </Box>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-around", borderTop: "1px solid #e9ebec", borderBottom: "1px solid #e9ebec", p: 3 }}>
-                    {data.map((item, index) =>
+                    {marketPlace?.map((item, index) =>
                         <Box key={index} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                             <Typography sx={{ fontSize: "20px", fontWeight: 500, color: "#495057" }}>{item.value}k</Typography>
-                            <Typography sx={{ color: "#878A99" }}>{item.name}</Typography>
+                            <Typography sx={{ color: "#878A99",textTransform:"capitalize" }}>{item.name}</Typography>
                         </Box>
                     )}
                 </Box>

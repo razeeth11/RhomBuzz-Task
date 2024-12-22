@@ -6,7 +6,7 @@ import ShowChartRoundedIcon from "@mui/icons-material/ShowChartRounded";
 import LaunchRoundedIcon from '@mui/icons-material/LaunchRounded';
 import { headingStyle, overviewIncomeStyle, overviewInnerStyle, TrafficIconStyle, TrafficMeterStyle, TrafficStyle, TrafficSub, TrafficValueStyle } from "./Styles";
 
-export const TrafficInsights = () => {
+export const TrafficInsights = ({userData}) => {
   return (
     <Grid>
       <Typography
@@ -33,7 +33,7 @@ export const TrafficInsights = () => {
             <Typography sx={headingStyle}>USERS</Typography>
             <PeopleAltRoundedIcon sx={overviewIncomeStyle} />
           </Box>
-          <Typography sx={TrafficValueStyle}>$567,678,99k</Typography>
+          <Typography sx={TrafficValueStyle}>4,545</Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />
@@ -61,7 +61,7 @@ export const TrafficInsights = () => {
             <Typography sx={headingStyle}>bounce rate</Typography>
             <LaunchRoundedIcon sx={overviewIncomeStyle} />
           </Box>
-          <Typography sx={TrafficValueStyle}>97.66k</Typography>
+          <Typography sx={TrafficValueStyle}>64.45k</Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />

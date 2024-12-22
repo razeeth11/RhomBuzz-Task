@@ -3,7 +3,7 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import ArrowDownwardRoundedIcon from "@mui/icons-material/ArrowDownwardRounded";
 import { overviewIncomeStyle, overviewInnerStyle, PerformanceInnerStyle, PerformanceStyle, PerformanceTitleStyle, TrafficIconStyle, TrafficMeterStyle } from "./Styles";
 
-export const BusinessPerformance = () => {
+export const BusinessPerformance = ({userData}) => {
   return (
     <Grid>
       <Typography
@@ -32,7 +32,7 @@ export const BusinessPerformance = () => {
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceInnerStyle}>
               <ShoppingBagOutlinedIcon sx={overviewIncomeStyle} />
-              197
+              {userData?.totalSalesCount}
             </Typography>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />
@@ -48,7 +48,7 @@ export const BusinessPerformance = () => {
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceInnerStyle}>
               <ShoppingBagOutlinedIcon sx={overviewIncomeStyle} />
-              7,522
+              {userData?.customers}
             </Typography>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />
@@ -64,7 +64,7 @@ export const BusinessPerformance = () => {
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceInnerStyle}>
               <ShoppingBagOutlinedIcon sx={overviewIncomeStyle} />
-              $2,845.05
+              ${userData?.totalRevenue}
             </Typography>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />
@@ -80,7 +80,7 @@ export const BusinessPerformance = () => {
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceInnerStyle}>
               <ShoppingBagOutlinedIcon sx={overviewIncomeStyle} />
-              405k
+              {userData?.totalStores}
             </Typography>
             <Box sx={TrafficMeterStyle}>
               <ArrowDownwardRoundedIcon sx={TrafficIconStyle} />

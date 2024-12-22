@@ -13,3 +13,87 @@ html {
   scrollbar-width: none;
   -webkit-overflow-scrolling: none;
 }
+
+.logIn-form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px 10px lightgray;
+  margin: 10% auto;
+  min-height: 400px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form .material-symbols-outlined{
+  font-size: 28px;
+  opacity: 0.5;
+  font-weight: 100;
+}
+
+input{
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  border: none;
+}
+
+.camera-icon{
+  font-size: 60px;
+  padding: 20px;
+  color: white;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgb(72, 38, 104);
+}
+
+.logIn-form button{
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  background: rgb(72, 38, 104);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 100px;
+}
+
+.logIn-form button:hover{
+  background-image: linear-gradient(to left , rgb(99, 49, 145) , rgb(72, 38, 104));
+}
+
+.error{
+  color: red;
+  margin-top: 5px;
+}
+
+#eye{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input:focus{
+  outline: none;
+}
+
+.input-div{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid grey;
+  margin-top: 20px;
+  padding: 0 10px;
+  background-color: white;
+}
+
+.copyright{
+  margin-top: 20px;
+}

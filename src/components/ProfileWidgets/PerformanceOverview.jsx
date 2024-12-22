@@ -7,7 +7,7 @@ import HandshakeRoundedIcon from '@mui/icons-material/HandshakeRounded';
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { overviewInnerStyle, PerformanceInnerIconStyle, PerformanceInnerStyle, PerformanceOverviewInnerIconStyle, PerformanceStyle, PerformanceTitleStyle } from "./Styles";
 
-export const PerformanceOverview = () => {
+export const PerformanceOverview = ({userData}) => {
     return (
       <Grid>
         <Typography
@@ -34,7 +34,7 @@ export const PerformanceOverview = () => {
           </Box>
           <Typography sx={PerformanceInnerStyle}>
             <RocketRoundedIcon sx={PerformanceOverviewInnerIconStyle} />
-            197
+            {userData?.campaignSent}
           </Typography>
         </Grid>
         <Grid
@@ -48,7 +48,7 @@ export const PerformanceOverview = () => {
           </Box>
           <Typography sx={PerformanceInnerStyle}>
             <CurrencyExchangeRoundedIcon sx={PerformanceOverviewInnerIconStyle} />
-            197
+            {userData?.annualProfit}
           </Typography>
         </Grid>
         <Grid
@@ -62,7 +62,7 @@ export const PerformanceOverview = () => {
           </Box>
           <Typography sx={PerformanceInnerStyle}>
             <ShowChartRoundedIcon sx={PerformanceOverviewInnerIconStyle} />
-            197
+            {userData?.leadConversion}
           </Typography>
         </Grid>
         <Grid
@@ -70,13 +70,13 @@ export const PerformanceOverview = () => {
         >
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceTitleStyle}>
-              CAMPAIGN SENT
+              DAILY AVERAGE INCOME
             </Typography>
             <KeyboardDoubleArrowUpRoundedIcon sx={PerformanceInnerIconStyle} />
           </Box>
           <Typography sx={PerformanceInnerStyle}>
             <EmojiEventsRoundedIcon sx={PerformanceOverviewInnerIconStyle} />
-            197
+            {userData?.dailyAvgIncome}
           </Typography>
         </Grid>
         <Grid
@@ -84,13 +84,13 @@ export const PerformanceOverview = () => {
         >
           <Box sx={overviewInnerStyle}>
             <Typography sx={PerformanceTitleStyle}>
-              CAMPAIGN SENT
+              ANNUAL DEALS
             </Typography>
             <KeyboardDoubleArrowUpRoundedIcon sx={PerformanceInnerIconStyle} />
           </Box>
           <Typography sx={PerformanceInnerStyle}>
             <HandshakeRoundedIcon sx={PerformanceOverviewInnerIconStyle} />
-            197
+            {userData?.annualDeals}
           </Typography>
         </Grid>
         </Grid>

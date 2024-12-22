@@ -6,7 +6,7 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import { Box, Grid, Link, Typography } from "@mui/material";
 import { headingStyle, overviewIncomeStyle, overviewInnerStyle, PerformanceStyle } from "./Styles";
 
-export const EarningsOverview = () => {
+export const EarningsOverview = ({userData}) => {
     return (
       <Grid>
         <Typography sx={{fontSize:"20px",color:"#7758ae",fontWeight:500,textDecoration:"underline",mb:3}}>Earnings Overview</Typography>
@@ -25,7 +25,7 @@ export const EarningsOverview = () => {
                 TOTAL EARNINGS
               </Typography>
               <Typography sx={{ color: "rgb(64,187,130)", fontWeight: 600 }}>
-                +16.87%
+                +{userData?.totalRevenue}%
               </Typography>
             </Box>
             <Typography
@@ -52,7 +52,7 @@ export const EarningsOverview = () => {
             <Typography
               sx={{ fontSize: "24px", fontWeight: 600, color: "#495057" }}
             >
-              $567,678,99k
+              {userData?.orders}
             </Typography>
             <Box sx={overviewInnerStyle}>
               <Link>View all orders</Link>
@@ -73,7 +73,7 @@ export const EarningsOverview = () => {
             <Typography
               sx={{ fontSize: "24px", fontWeight: 600, color: "#495057" }}
             >
-              $567,678,99k
+              {userData?.customers}
             </Typography>
             <Box sx={overviewInnerStyle}>
               <Link>See details</Link>
@@ -94,7 +94,7 @@ export const EarningsOverview = () => {
             <Typography
               sx={{ fontSize: "24px", fontWeight: 600, color: "#495057" }}
             >
-              $567,678,99k
+              {userData?.balance}
             </Typography>
             <Box sx={overviewInnerStyle}>
               <Link>Withdraw money</Link>

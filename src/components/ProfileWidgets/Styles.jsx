@@ -7,7 +7,7 @@ export const overviewInnerStyle = {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-    fontSize: "30px",
+    fontSize: "24px",
     color: "#495057",
     fontWeight: 600,
   };

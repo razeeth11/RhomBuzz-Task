@@ -10,7 +10,6 @@ import AutoStoriesRoundedIcon from '@mui/icons-material/AutoStoriesRounded';
 import FlightLandRoundedIcon from '@mui/icons-material/FlightLandRounded';
 import MonitorHeartRoundedIcon from '@mui/icons-material/MonitorHeartRounded';
 import LayersRoundedIcon from '@mui/icons-material/LayersRounded';
-import SettingsInputCompositeRoundedIcon from '@mui/icons-material/SettingsInputCompositeRounded';
 import FormatAlignCenterRoundedIcon from '@mui/icons-material/FormatAlignCenterRounded';
 import { Navigate, useNavigate } from 'react-router';
 

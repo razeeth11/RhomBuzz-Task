@@ -8,9 +8,15 @@ import { HistoryBids } from './historybids';
 import { NFTCharts } from './NFTChart.jsx';
 import { NftArtWork } from './NFTArtWork.jsx';
 import { Box, Button, Grid, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 
-export const DashboardComponents = () => {
+export const DashboardComponents = ({userData,
+    dashboardData}) => {
+   
+    const userId = localStorage.getItem("token")
+    const user = userData?.find((item)=> item.userId === userId)
+
     const iconStyle = {
         color: "#7758ae",
         background: "#EEE8F8",
@@ -20,8 +26,8 @@ export const DashboardComponents = () => {
     };
 
     const data = [
-        { name: "total revenue", price: "437,547,334", percent: "3.24" },
-        { name: "estimated", price: "545,345,56", percent: "1.65" },
+        { name: "total revenue", price: user?.totalRevenue, percent: "3.24" },
+        { name: "estimated", price: user?.customers, percent: "1.65" },
     ];
 
     return (
@@ -164,7 +170,7 @@ export const DashboardComponents = () => {
                                         fontWeight: 600,
                                     }}
                                 >
-                                    ${item.price}
+                                    ${item.price}k
                                 </Typography>
                                 <Box>
                                     <Box
@@ -206,12 +212,12 @@ export const DashboardComponents = () => {
                         ))}
                     </Grid>
 
-                    <NFTCharts />
+                    <NFTCharts marketPlace={dashboardData[0]?.marketPlace}/>
                 </Grid>
-                <HistoryBids />
+                <HistoryBids arrayData={dashboardData[0]?.bidHistory}/>
             </Grid>
             <Grid sx={{ ml: "280px", }}>
-                <NftArtWork />
+                <NftArtWork topArtworks={dashboardData[0]?.topArtworks} />
             </Grid>
         </Grid>
     );
